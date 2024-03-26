@@ -12,6 +12,7 @@ export const getReadBooks = () => {
 }
 export const saveBooks = (book) => {
     let readBooks = getReadBooks()
+    let wishedBooks=getWishedBooks()
     const isExist = readBooks.find(b => b.bookId == book.bookId)
     if (isExist) {
         return toast.error("Already Added !")
@@ -19,10 +20,10 @@ export const saveBooks = (book) => {
         readBooks.push(book)
         localStorage.setItem('read-books', JSON.stringify(readBooks))
         toast.success("Book added Successfully")
+        const filterWishedBooks=wishedBooks.filter((b)=> book.bookId !== b.bookId)
+        wishedBooks=filterWishedBooks;
     }
-    let wishedBooks=getWishedBooks()
-    const filterWishedBooks=wishedBooks.filter((b)=> readBooks.bookId !== b.bookId)
-    wishedBooks=filterWishedBooks;
+    
 }
 
 //For wished Books:
