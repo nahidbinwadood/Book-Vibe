@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { FaRegStar } from "react-icons/fa6";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Book = ({ book }) => {
-    const { image, tags, bookName, author, category, rating } = book
+    const { image, tags, bookName, author, category, rating,bookId } = book
     
     return (
-        <NavLink to='book_details' >
-            <div>
+        <Link to={`book_details/${bookId}`} >
+            <div className=''>
                 <div className='border border-[#1313131A] rounded-xl p-6 space-y-5 lg:space-y-10 cursor-pointer'>
                     <div className='bg-[#1313131A] px-5 py-8 rounded-xl'>
                         <img className='h-[200px] w-[350px] object-contain mx-auto' src={image} alt="" />
@@ -27,7 +27,7 @@ const Book = ({ book }) => {
                     </div>
                 </div>
             </div>
-        </NavLink>
+        </Link>
     );
 };
 

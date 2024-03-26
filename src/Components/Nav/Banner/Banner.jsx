@@ -1,7 +1,7 @@
 import bannerImg from './pngwing 1.png'
 const Banner = () => {
     return (
-        <div className='mx-4'>
+        <div className='mx-6'>
             <div className="container rounded-2xl mx-auto mt-10 lg:mt-20 lg:h-[70vh] bg-[#1313131A]">
             <div className='grid grid-cols-1 md:grid-cols-12 px-6 py-8 gap-6 md:gap-0 lg:px-36 lg:py-36'>
                 <div className='lg:col-span-7 flex flex-col justify-center items-center gap-5 lg:gap-12'>

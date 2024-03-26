@@ -38,9 +38,9 @@ const Nav = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end gap-4">
-                    <a className="px-4 py-2 lg:px-6 lg:py-3 rounded-lg hover:scale-105 cursor-pointer transition text-white ws font-semibold lg:text-lg bg-[#23BE0A] ">Sign In </a>
-                    <a className="px-4 py-2 lg:px-6 lg:py-3 rounded-lg hover:scale-105 cursor-pointer transition text-white ws font-semibold lg:text-lg bg-[#59C6D2] ">Sign Up </a>
+                <div className="navbar-end md:gap-4">
+                    <a className="mr-4 md:mr-0 px-4 py-2 lg:px-6 lg:py-3 rounded-lg hover:scale-105 cursor-pointer transition text-white ws font-semibold lg:text-lg bg-[#23BE0A] ">Sign In </a>
+                    <a className="hidden md:flex px-4 py-2 lg:px-6 lg:py-3 rounded-lg hover:scale-105 cursor-pointer transition text-white ws font-semibold lg:text-lg bg-[#59C6D2] ">Sign Up </a>
                     
                 
                 </div>
