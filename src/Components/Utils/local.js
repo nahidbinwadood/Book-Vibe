@@ -55,4 +55,22 @@ const saveWishedBooks = (book) => {
     }
 
 }
-export { getWishedBooks, saveWishedBooks }
+
+//Sorted Array:
+const getSortedArray = () => {
+    let sortedArray = [];
+    const storedArray = localStorage.getItem('sorted-books');
+    if (storedArray) {
+        sortedArray = JSON.parse(storedArray);
+    }
+    return sortedArray
+}
+
+const saveSortedArray = (book) => {
+    let books = getSortedArray()
+    books.push(book)
+    localStorage.setItem('sorted-books', JSON.stringify(books))
+}
+       
+    
+export { getWishedBooks, saveWishedBooks,saveSortedArray,getSortedArray }

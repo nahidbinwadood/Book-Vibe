@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { GoPeople } from "react-icons/go";
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 import { CiLocationOn } from "react-icons/ci";
@@ -8,14 +9,53 @@ import { getReadBooks } from "../../../Components/Utils/local";
 
 const ReadBooks = () => {
     const [readBook, setReadBook] = useState([])
+    const [showData, setShowData] = useState([])
+
     useEffect(() => {
         let storedReadBooks = getReadBooks();
         setReadBook(storedReadBooks);
-    },[])
+        setShowData(storedReadBooks)
+    }, [])
+
+
+    const handleFilter = (filter) => {
+        if (filter == 'rating') {
+            const sortByRating = readBook.sort((a, b) => b.rating - a.rating)
+            setShowData([...sortByRating])
+            console.log(showData);
+        } else if (filter === 'page-number') {
+            const sortByPageNumber =readBook.sort((a, b) => b.totalPages - a.totalPages)
+            setShowData([...sortByPageNumber])
+            console.log(showData);
+        } else if (filter === 'publisher') {
+            const sortByPublisher = readBook.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing)
+            setShowData([...sortByPublisher])
+            console.log(showData);
+
+        }
+    }
+
+
+
+
     return (
+
         <div className="mt-20">
+            <div>
+                <div className='text-end my-20  w-full '>
+                    <div className="dropdown ">
+                        <div tabIndex={0} role="button" className="btn m-1 bg-green-500 px-10 "><h2 className='text-white ws font-semibold text-xl'>Sort By</h2><RiArrowDropDownLine className='size-8 text-white' />
+                        </div>
+                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li onClick={() => handleFilter('rating')}><a>Rating</a></li>
+                            <li onClick={() => handleFilter('page-number')}><a>Number of pages</a></li>
+                            <li onClick={() => handleFilter('publisher')}><a>Publisher year</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             {
-                readBook.map((book, idx) => (
+                showData.map((book, idx) => (
                     <div key={idx}>
                         <div className="grid grid-cols-1 gap-10 mb-8 md:grid-cols-12 border border-[#13131326] p-6 rounded-xl">
                             <div className="lg:col-span-3 bg-[#1313131A] px-5 py-8 rounded-xl">

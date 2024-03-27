@@ -1,45 +1,11 @@
-import { useEffect, useState } from 'react';
-import { RiArrowDropDownLine } from "react-icons/ri";
+import {useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { getReadBooks } from '../Utils/local';
 const Listed_books = () => {
     const [tabIndex, setTabIndex] = useState(0);
-    const [showData,setShowData]=useState([])
-    useEffect(()=>{
-        const displayData=getReadBooks()
-        setShowData(displayData);
-    },[])
-    const handleFilter=(filter)=>{
-        if(filter== 'rating'){
-            const sortByRating=showData.sort((a,b)=> b.rating-a.rating)
-            setShowData(sortByRating)
-            console.log(showData);
-        }else if(filter==='page-number'){
-            const sortByPageNumber=showData.sort((a,b)=> b.totalPages-a.totalPages)
-            setShowData(sortByPageNumber)
-            console.log(showData);
-        }else if(filter==='publisher'){
-            const sortByPublisher=showData.sort((a,b)=> b.yearOfPublishing-a.yearOfPublishing)
-            setShowData(sortByPublisher)
-            console.log(showData);
-        }
-    }
-
     return (
         <div className="container mx-auto px-6 md:px-0 mt-20">
             <div className="text-center">
                 <h2 className="ws font-bold text-3xl">Books</h2>
-            </div>
-            <div className='text-center my-20  w-full '>
-                <div className="dropdown ">
-                    <div tabIndex={0} role="button" className="btn m-1 bg-green-500 px-10 "><h2 className='text-white ws font-semibold text-xl'>Sort By</h2><RiArrowDropDownLine className='size-8 text-white'/>
-                    </div>
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li onClick={()=>handleFilter('rating')}><a>Rating</a></li>
-                        <li onClick={()=>handleFilter('page-number')}><a>Number of pages</a></li>
-                        <li onClick={()=>handleFilter('publisher')}><a>Publisher year</a></li>
-                    </ul>
-                </div>
             </div>
 
             <div>
