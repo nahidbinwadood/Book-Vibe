@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GoPeople } from "react-icons/go";
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 import { CiLocationOn } from "react-icons/ci";
@@ -7,7 +7,6 @@ import { getReadBooks } from "../../../Components/Utils/local";
 
 
 const ReadBooks = () => {
-    const books = useLoaderData()
     const [readBook, setReadBook] = useState([])
     useEffect(() => {
         let storedReadBooks = getReadBooks();
@@ -33,7 +32,7 @@ const ReadBooks = () => {
                                     </div>
                                     <div className="ws flex items-center md:justify-center gap-2">
                                         <CiLocationOn className="size-5" />
-                                        <h2>Year of Publishing:{books[0].yearOfPublishing} </h2>
+                                        <h2>Year of Publishing: {book.yearOfPublishing} </h2>
                                     </div>
                                 </div>
                                 <div className="flex gap-4 md:gap-6">

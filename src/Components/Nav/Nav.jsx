@@ -16,6 +16,8 @@ const Nav = () => {
                             <NavLink to='/'><a>Home</a></NavLink>
                             <NavLink to='listed_books'><a>Listed Books</a></NavLink>
                             <NavLink to='pages_to_read'><a>Pages to Read</a></NavLink>
+                            <NavLink to='blogs'><a>Blogs</a></NavLink>
+                            <NavLink to='about'><a>Contact</a></NavLink>
                         </ul>
                     </div>
                     <a className="text-xl lg:text-3xl ws font-bold">Book Vibe</a>
@@ -32,6 +34,14 @@ const Nav = () => {
                         </NavLink>
                         <NavLink to='./pages_to_read' className={({isActive})=> isActive ? 'rounded-lg border-2 border-[#23BE0A] text-[#23BE0A]' : 'text-[#131313CC]'}>
                             <button className="px-6 py-3 ws text-xl font-semibold ">Pages to Read
+                            </button>
+                        </NavLink>
+                        <NavLink to='./blogs' className={({isActive})=> isActive ? 'rounded-lg border-2 border-[#23BE0A] text-[#23BE0A]' : 'text-[#131313CC]'}>
+                            <button className="px-6 py-3 ws text-xl font-semibold ">Blogs
+                            </button>
+                        </NavLink>
+                        <NavLink to='./about' className={({isActive})=> isActive ? 'rounded-lg border-2 border-[#23BE0A] text-[#23BE0A]' : 'text-[#131313CC]'}>
+                            <button className="px-6 py-3 ws text-xl font-semibold ">Contact
                             </button>
                         </NavLink>
 

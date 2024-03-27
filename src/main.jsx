@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import MainLayout from './Components/MainLayout/MainLayout.jsx';
 import Listed_books from './Components/Listed_Books/Listed_books.jsx';
-import Pages_to_read from './Components/Pages_To_Read/Pages_to_read.jsx';
 import Homepage from './HomePage/Homepage.jsx';
 import Book_details from './HomePage/Books/Book_Details/Book_details.jsx';
 import ReadBooks from './Components/Listed_Books/Read_Books/ReadBooks.jsx';
@@ -15,6 +14,8 @@ import WishlistBooks from './Components/Listed_Books/Wishlist_Books/WishlistBook
 import  { Toaster } from 'react-hot-toast';
 import ErrorPage from './Components/ErrorPage/Error.jsx';
 import ArrayItems from './Components/Pages_To_Read/ArrayItems.jsx';
+import Blogs from './Components/Blogs/Blogs.jsx';
+import About from './Components/About/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,23 +25,23 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Homepage></Homepage>,
-        loader: () => fetch('data.json')
+        loader: () => fetch('/data.json')
 
       },
       {
         path: 'book_details/:bookId',
         element: <Book_details></Book_details>,
-        loader: () => fetch(`data.json`)
+        loader: () => fetch(`/data.json`)
       },
       {
         path: 'listed_books/book_details/:bookId',
         element: <Book_details></Book_details>,
-        loader: () => fetch(`data.json`)
+        loader: () => fetch(`/data.json`)
       },
       {
         path: 'listed_books/wishlist_books/book_details/:bookId',
         element: <Book_details></Book_details>,
-        loader: () => fetch(`data.json`)
+        loader: () => fetch(`/data.json`)
       },
       {
         path: 'listed_books',
@@ -49,18 +50,26 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <ReadBooks></ReadBooks>,
-            loader: () => fetch(`data.json`),
+            loader: () => fetch(`/data.json`),
           },
           {
             path: 'wishlist_books',
             element: <WishlistBooks></WishlistBooks>,
-            loader: () => fetch(`data.json`)
+            loader: () => fetch(`/data.json`)
           }
         ]
       },
       {
         path: 'pages_to_read',
         element: <ArrayItems></ArrayItems>
+      },
+      {
+        path: 'blogs',
+        element: <Blogs></Blogs>
+      },
+      {
+        path: 'about',
+        element:<About></About>
       }
     ]
   },
