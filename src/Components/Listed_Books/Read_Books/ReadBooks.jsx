@@ -3,7 +3,7 @@ import { GoPeople } from "react-icons/go";
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 import { CiLocationOn } from "react-icons/ci";
 import { useEffect, useState } from "react";
-import { getReadBooks, } from "../../../Components/Utils/local";
+import { getReadBooks } from "../../../Components/Utils/local";
 
 
 const ReadBooks = () => {
@@ -12,8 +12,7 @@ const ReadBooks = () => {
     useEffect(() => {
         let storedReadBooks = getReadBooks();
         setReadBook(storedReadBooks);
-        console.log(readBook);
-    }, [])
+    },[])
     return (
         <div className="mt-20">
             {
@@ -50,10 +49,10 @@ const ReadBooks = () => {
                                 <hr />
                                 <div className="flex flex-col md:flex-row items-center gap-4  md:gap-4">
                                     <div className="flex gap-2 md:gap-4">
-                                        <Link className="mr-4 w-1/2 md:w-[220px] text-center md:mr-0 px-5 py-2 lg:px-6 lg:py-3 rounded-3xl md:rounded-full hover:scale-105 cursor-pointer transition ws font-semibold lg:text-lg bg-[#328EFF26] text-[#328EFF] ">Category: {book.category} </Link>
-                                        <Link className="mr-4 w-1/2 md:w-[220px] md:mr-0 text-center px-6 py-2 lg:px-6 lg:py-3 rounded-3xl md:rounded-full hover:scale-105 cursor-pointer transition text-[#FFAC33] ws font-semibold lg:text-lg bg-[#FFAC334D] ">Rating: {book.rating} </Link>
+                                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Category: {book.category} </Link>
+                                        <Link className="mr-4 w-1/2 md:w-[220px] md:mr-0 items-center text-center px-6 py-2 lg:px-6 lg:py-3 rounded-3xl md:rounded-full hover:scale-105 cursor-pointer transition text-[#FFAC33] ws font-semibold lg:text-lg bg-[#FFAC334D] ">Rating: {book.rating}</Link>
                                     </div>
-                                    <Link to='' className="mr-4 text-center md:w-[220px] md:mr-0 px-6 py-3 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer transition text-white ws font-semibold lg:text-lg bg-[#23BE0A] rounded-full">View Details </Link>
+                                    <Link to={`book_details/${book.bookId}`} className="mr-4 text-center md:w-[220px] md:mr-0 px-6 py-3 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer transition text-white ws font-semibold lg:text-lg bg-[#23BE0A] rounded-full">View Details </Link>
                                 </div>
                             </div>
                         </div>

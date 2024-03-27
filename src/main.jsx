@@ -13,10 +13,13 @@ import Book_details from './HomePage/Books/Book_Details/Book_details.jsx';
 import ReadBooks from './Components/Listed_Books/Read_Books/ReadBooks.jsx';
 import WishlistBooks from './Components/Listed_Books/Wishlist_Books/WishlistBooks.jsx';
 import  { Toaster } from 'react-hot-toast';
+import ErrorPage from './Components/ErrorPage/Error.jsx';
+import ArrayItems from './Components/Pages_To_Read/ArrayItems.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -30,13 +33,23 @@ const router = createBrowserRouter([
         loader: () => fetch(`data.json`)
       },
       {
+        path: 'listed_books/book_details/:bookId',
+        element: <Book_details></Book_details>,
+        loader: () => fetch(`data.json`)
+      },
+      {
+        path: 'listed_books/wishlist_books/book_details/:bookId',
+        element: <Book_details></Book_details>,
+        loader: () => fetch(`data.json`)
+      },
+      {
         path: 'listed_books',
         element: <Listed_books></Listed_books>,
         children: [
           {
             index: true,
             element: <ReadBooks></ReadBooks>,
-            loader: () => fetch(`data.json`)
+            loader: () => fetch(`data.json`),
           },
           {
             path: 'wishlist_books',
@@ -47,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'pages_to_read',
-        element: <Pages_to_read></Pages_to_read>
+        element: <ArrayItems></ArrayItems>
       }
     ]
   },
