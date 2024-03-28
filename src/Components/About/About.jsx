@@ -11,7 +11,7 @@ const About = () => {
                                 <h2 className="text-3xl font-bold leading-tight text-white m:text-4xl lg:leading-tight lg:text-5xl">It’s time to read something exciting!</h2>
                                 <p className="max-w-xl text-white mx-auto mt-4 text-base leading-relaxed ">We are giving some of best types of books in our country.You can read any of types you like.</p>
 
-                                <img className="relative z-10 max-w-xs mx-auto -mb-16 md:hidden" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line-mobile.svg" alt="" />
+                                <img className="relative z-10 max-w-xs mx-auto -mb-16 hidden" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line-mobile.svg" alt="" />
 
                                 <img className="hidden w-full translate-x-24 translate-y-8 md:block" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line.svg" alt="" />
                             </div>

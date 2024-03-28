@@ -10,7 +10,7 @@ const Blogs = () => {
                             <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Here are some of our blogs of our people .You can know more about us after reading those blogs.</p>
                         </div>
 
-                        <div className="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
+                        <div className="grid max-w-md grid-cols-1 gap-8 md:gap-4 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
                             <div>
                                 <a href="#" title="" className="block aspect-w-4 aspect-h-3">
                                     <img className="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/1/blog-post-1.jpg" alt="" />
