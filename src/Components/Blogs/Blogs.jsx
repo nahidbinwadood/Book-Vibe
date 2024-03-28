@@ -1,88 +1,58 @@
-import { Link } from "react-router-dom";
-
 
 const Blogs = () => {
     return (
-        <div className="container mx-auto px-6 md:px-0 mt-20 ">
-            <div className="text-center my-8">
-                <h2 className="ws font-bold text-3xl">Blogs</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="p-5 border border-gray-400 mb-6 rounded-xl space-y-6">
-                    <div className="ws text-gray-600 text-center">
-                        <p className="text-2xl"><span className="font-bold text-black">Title :</span>Wanderlust Diaries: Tales from the Open Road</p>
-                    </div>
-                    <div className="ws space-y-5 text-lg">
-                        <p>Welcome to Wanderlust Diaries, where every journey is an adventure and every destination is a story waiting to be told. Join me, your intrepid explorer, as we traverse the globe in search of breathtaking landscapes, fascinating cultures, and unforgettable experiences.</p>
-                        <p>In each blog post, I will take you along on my travels, sharing personal anecdotes, stunning photographs, and practical travel tips. From hiking through the misty mountains of Patagonia to exploring the bustling streets of Tokyo, we will embark on a virtual journey to some of the worlds most awe-inspiring destinations.</p>
-                    </div>
-                    <div>
-                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Learn More </Link>
-                    </div>
-                </div>
-                <div className="p-5 border border-gray-400 mb-6 rounded-xl space-y-6">
-                    <div className="ws text-gray-600 text-center">
-                        <p className="text-2xl"><span className="font-bold text-black">Title :</span>  Culinary Chronicles: A Journey Through Flavor </p>
-                    </div>
-                    <div className="ws space-y-5 text-lg">
-                        <p>Welcome to Culinary Chronicles, where we embark on a delectable journey through the world of food and flavor! Join me, your culinary guide, as we explore tantalizing recipes, uncover hidden gems in the culinary world, and share the joys of cooking and dining.</p>
-                        <p>In each blog post, we will delve into a different culinary adventure. From mastering the art of homemade pasta to discovering the secrets of authentic Thai cuisine, there is always something new and exciting to explore in the kitchen. I will share step-by-step recipes, cooking tips, and personal anecdotes to inspire and empower you to unleash your inner chef.</p>
-                    </div>
-                    <div>
-                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Learn More </Link>
-                    </div>
-                </div>
-                <div className="p-5 border border-gray-400 mb-6 rounded-xl space-y-6">
-                    <div className="ws text-gray-600 text-center">
-                        <p className="text-2xl"><span className="font-bold text-black">Title :</span> Mindful Living: Nurturing the Body, Mind, and Soul </p>
-                    </div>
-                    <div className="ws space-y-5 text-lg">
-                        <p>Welcome to Mindful Living, a sanctuary for those seeking balance, peace, and fulfillment in their lives. Join me, your mindful mentor, as we embark on a journey of self-discovery, personal growth, and holistic well-being.</p>
-                        <p>So, whether you are seeking inner peace, greater clarity, or simply a more meaningful life, join me on this transformative journey of mindful living. Together, let us cultivate a life filled with joy, purpose, and abundance!</p>
+        <div className="container mx-auto px-6 md:px-0 ">
+            <div>
+                <section className="py-10 ws bg-white sm:py-16 lg:py-14">
+                    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+                        <div className="max-w-2xl mx-auto text-center">
+                            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Latest from blog</h2>
+                            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Here are some of our blogs of our people .You can know more about us after reading those blogs.</p>
+                        </div>
 
-                    </div>
-                    <div>
-                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Learn More </Link>
-                    </div>
-                </div>
-                <div className="p-5 border border-gray-400 mb-6 rounded-xl space-y-6">
-                    <div className="ws text-gray-600 text-center">
-                        <p className="text-2xl"><span className="font-bold text-black">Title : </span>TechTrend Insights: Navigating the Digital Frontier</p>
-                    </div>
-                    <div className="ws space-y-5 text-lg">
-                        <p>Welcome to TechTrend Insights, your go-to source for the latest developments, innovations, and trends in the ever-evolving world of technology. Join me, your tech-savvy guide, as we delve into the fascinating realm of gadgets, software, and digital culture..</p>
-                        <p>But TechTrend Insights is not just about the latest gadgets and gizmos.It is also about understanding the broader implications of technology on society, economy, and ethics. We will discuss topics like data privacy, digital divide, and the impact of automation on jobs, sparking thought-provoking conversations about the future we are building together.v!</p>
-                    </div>
-                    <div>
-                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Learn More </Link>
-                    </div>
-                </div>
-                <div className="p-5 border border-gray-400 mb-6 rounded-xl space-y-6">
-                    <div className="ws text-gray-600 text-center">
-                        <p className="text-2xl"><span className="font-bold text-black">Title : </span>EcoWarrior Chronicles: Empowering Environmental Action</p>
-                    </div>
-                    <div className="ws space-y-5 text-lg">
-                        <p>Welcome to EcoWarrior Chronicles, where each activity, no matter how little, has the control to create a contrast within the battle against climate alter and natural debasement. Connect me, your eco-conscious advocate, as we set out on a mission to ensure and protect our planet for future generations.</p>
-                        <p>In each web journal post, we will investigate commonsense tips, eco-friendly arrangements, and motivating victory stories from the front lines of natural activism. From lessening plastic squander to advancing renewable vitality, from supporting for economical horticulture to supporting preservation endeavors, we will dive into a wide run of subjects pointed at enabling people and communities to require activity.!</p>
+                        <div className="grid max-w-md grid-cols-1 mx-auto mt-12 lg:max-w-full lg:mt-16 lg:grid-cols-3 gap-x-16 gap-y-12">
+                            <div>
+                                <a href="#" title="" className="block aspect-w-4 aspect-h-3">
+                                    <img className="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/1/blog-post-1.jpg" alt="" />
+                                </a>
+                                <span className="inline-flex px-4 py-2 text-xs font-semibold tracking-widest uppercase rounded-full text-rose-500 bg-rose-100 mt-9"> Technology </span>
+                                <p className="mt-6 text-xl font-semibold">
+                                    <a href="#" title="" className="text-black">Book Bliss Awaits: Unveiling the Treasures of an Innovative Book Website</a>
+                                </p>
+                                <p className="mt-4 text-gray-600">Book Bliss Awaits invites you to uncover the wonders of an innovative book website, where literary treasures await your discovery. Dive into a world of limitless reading possibilities, with curated recommendations, interactive features, and a vibrant community of fellow book enthusiasts. Experience the joy of exploring new genres, connecting with authors, and immersing yourself in captivating stories – your literary adventure begins here.Try to explore different books.</p>
+                                <div className="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                                <span className="block text-sm font-bold tracking-widest text-gray-500 uppercase"> Oliver Omnibus. June 12, 2021 </span>
+                            </div>
 
-                    </div>
-                    <div>
-                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Learn More </Link>
-                    </div>
-                </div>
-                <div className="p-5 border border-gray-400 mb-6 rounded-xl space-y-6">
-                    <div className="ws text-gray-600 text-center">
-                        <p className="text-2xl"><span className="font-bold text-black">Title :</span> Creativity Corner: Unleashing Your Inner Artist </p>
-                    </div>
-                    <div className="ws space-y-5 text-lg">
-                        <p>Welcome to Imagination Corner, a safe house for craftsmen, producers, and visionaries to unleash their creative ability and express their one of a kind vision to the world. Connect me, your imaginative companion, as we set out on a colorful travel through the domains of craftsmanship, plan, and inventive expression.</p>
-                        <p>But Inventiveness Corner is not around acing creative skills.It is too almost developing a mentality of interest, experimentation, and self-expression. We will dig into subjects like overcoming creative blocks, finding motivation in existence , and grasping blemish as a portion of the imaginative prepare, enabling you to unleash your full inventive potential.</p>
+                            <div>
+                                <a href="#" title="" className="block aspect-w-4 aspect-h-3">
+                                    <img className="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/1/blog-post-2.jpg" alt="" />
+                                </a>
+                                <span className="inline-flex px-4 py-2 text-xs font-semibold tracking-widest uppercase rounded-full text-sky-500 bg-sky-100 mt-9"> Marketing </span>
+                                <p className="mt-6 text-xl font-semibold">
+                                    <a href="#" title="" className="text-black">Page-Turning Perfection: Why You Need to Bookmark This Book Website Today </a>
+                                </p>
+                                <p className="mt-4 text-gray-600">Page-Turning Perfectionis your ultimate guide to a revolutionary book website that promises to transform your reading experience. From its seamless interface to its vast selection of titles and personalized recommendations, this website is a must-bookmark for any avid reader seeking literary bliss. Do not miss out on the opportunity to discover your next favorite book – bookmark this website today and embark on an unforgettable reading journey!</p>
+                                <div className="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                                <span className="block text-sm font-bold tracking-widest text-gray-500 uppercase"> Liam Literary . June 12, 2023 </span>
+                            </div>
 
+                            <div>
+                                <a href="#" title="" className="block aspect-w-4 aspect-h-3">
+                                    <img className="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/1/blog-post-3.jpg" alt="" />
+                                </a>
+                                <span className="inline-flex px-4 py-2 text-xs font-semibold tracking-widest uppercase rounded-full text-sky-500 bg-sky-100 mt-9"> Marketing </span>
+                                <p className="mt-6 text-xl font-semibold">
+                                    <a href="#" title="" className="text-black">From Fantasy to Memoirs: How a Versatile Book Website Satisfies Every Reading Craving</a>
+                                </p>
+                                <p className="mt-4 text-gray-600">From Fantasy to Memoirs--showcases the versatility of a premier book website that caters to all reading preferences. Dive into enchanting realms of fantasy or delve into the raw honesty of memoirs with ease, thanks to curated collections and personalized recommendations. Discover a platform where every reading craving is satisfied, offering an immersive and diverse literary experience for all.You can enjoy reading books from website and can explore many things.</p>
+                                <div className="h-0 mt-6 mb-4 border-t-2 border-gray-200 border-dashed"></div>
+                                <span className="block text-sm font-bold tracking-widest text-gray-500 uppercase"> Sofia Storyteller
+                                    . January 12, 2024 </span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <Link className="mr-4 text-center md:mr-0 px-4 py-2 lg:px-6 lg:py-3 hover:scale-105 cursor-pointer rounded-3xl md:rounded-full transition text-[#328EFF] ws font-semibold lg:text-lg bg-[#328EFF26] ">Learn More </Link>
-                    </div>
-                </div>
+                </section>
             </div>
 
         </div>

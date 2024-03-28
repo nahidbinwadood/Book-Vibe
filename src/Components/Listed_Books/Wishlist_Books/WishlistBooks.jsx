@@ -21,7 +21,7 @@ const WishlistBooks = () => {
             setShowData([...sortByRating])
             console.log(showData);
         } else if (filter === 'page-number') {
-            const sortByPageNumber =wishlistBook.sort((a, b) => b.totalPages - a.totalPages)
+            const sortByPageNumber = wishlistBook.sort((a, b) => b.totalPages - a.totalPages)
             setShowData([...sortByPageNumber])
             console.log(showData);
         } else if (filter === 'publisher') {
@@ -35,14 +35,19 @@ const WishlistBooks = () => {
         <div className="mt-20">
             <div>
                 <div className='text-end my-20  w-full '>
-                    <div className="dropdown ">
-                        <div tabIndex={0} role="button" className="btn m-1 bg-green-500 px-10 "><h2 className='text-white ws font-semibold text-xl'>Sort By</h2><RiArrowDropDownLine className='size-8 text-white' />
+                    <div className="flex flex-col md:flex-row gap-10 md:gap-0 items-center justify-between">
+                        <div className="mx-auto md:pl-56 lg:pl-52 ws font-bold text-2xl lg:text-3xl">
+                            <h2>Wished Books : </h2>
                         </div>
-                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li onClick={() => handleFilter('rating')}><a>Rating</a></li>
-                            <li onClick={() => handleFilter('page-number')}><a>Number of pages</a></li>
-                            <li onClick={() => handleFilter('publisher')}><a>Publisher year</a></li>
-                        </ul>
+                        <div className="dropdown">
+                            <div tabIndex={0} role="button" className="btn m-1 bg-green-500 px-10 "><h2 className='text-white ws font-semibold text-xl'>Sort By</h2><RiArrowDropDownLine className='size-8 text-white' />
+                            </div>
+                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <li onClick={() => handleFilter('rating')}><a>Rating</a></li>
+                                <li onClick={() => handleFilter('page-number')}><a>Number of pages</a></li>
+                                <li onClick={() => handleFilter('publisher')}><a>Publisher year</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
