@@ -15,6 +15,7 @@
     "flowbite-react": "^0.7.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
+    "mdb-react-ui-kit": "^7.2.0",
     "primereact": "^10.5.3",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
