@@ -1,8 +1,28 @@
-# React + Vite
+# Title: Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site : 
+-[BookVibe](https://guileless-lolly-a03759.netlify.app/)
 
-Currently, two official plugins are available:
+Features and Characteristics :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React Router](https://reactrouter.com/en/main)
+- [React-Hot-Toast](https://react-hot-toast.com/)
+- [User Friendly]
+- [Read books and Wishlist data can be sorted]
+- [Read books data will in graph](https://guileless-lolly-a03759.netlify.app/pages_to_read)
+- [Mobile Responsive]
+
+
+Resources:
+
+- [React Router Dom](https://reactrouter.com/en/main)
+- [Tailwindcss Buttons](https://devdojo.com/tailwindcss/buttons)
+- [Mamba UI - Components](https://mambaui.com/components)
+- [Animated Gradient Text](https://www.andrealves.dev/blog/how-to-make-an-animated-gradient-text-with-tailwindcss/)
+- [React-Hot-Toast](https://react-hot-toast.com/)
+- [React-Spinner](https://www.npmjs.com/package/react-spinners)
+- [React-Icons](https://react-icons.github.io/react-icons/)
+- [React-Markdown](https://www.npmjs.com/package/react-markdown)
+- [Prop-Types](https://www.npmjs.com/package/prop-types)
+- [Daisy UI](https://daisyui.com/)
+- [TailwindCSS](https://tailwindcss.com/)
