@@ -1,9 +1,4 @@
 import { ResponsiveContainer,BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
-
-
-const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
-
-
 const data = [
     {
         
@@ -39,7 +34,7 @@ const Pages_to_read = ({ books }) => {
     // console.log(storedData);
 
     return (
-        <div className="text-center">
+        <div className="text-center my-20 md:my-40">
 
             <ResponsiveContainer  width="100%" height={500}>
                 <BarChart
@@ -54,9 +49,9 @@ const Pages_to_read = ({ books }) => {
                     <CartesianGrid strokeDasharray="3 3" />
                     {window.innerWidth > 768 && <XAxis dataKey="bookName" />}
                     <YAxis />
-                    <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                    <Bar dataKey="totalPages" fill="#00C49F" shape={<TriangleBar />} label={{ position: 'top' }}>
                         {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                            <Cell key={`cell-${index}`} />
                         ))}
                     </Bar>
                 </BarChart>
